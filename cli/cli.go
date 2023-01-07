@@ -8,8 +8,8 @@ import (
 )
 
 type PromptResult struct {
-	inputs     [][2]string
-	badLetters []string
+	Inputs     [][2]string
+	BadLetters []string
 }
 
 func InputPrompt() PromptResult {
@@ -66,7 +66,7 @@ func InputPrompt() PromptResult {
 	letters := strings.Split(strings.TrimSpace(knownBadLetters), ",")
 
 	return PromptResult{
-		inputs:     strArray,
-		badLetters: letters,
+		Inputs:     strArray,
+		BadLetters: letters,
 	}
 }
